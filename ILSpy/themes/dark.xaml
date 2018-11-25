@@ -3454,4 +3454,16 @@
 	</Style>
 
 	<!--#endregion-->
+	
+	
+	<!-- ILSpy Custom Starts Here-->
+	<Style x:Key="{x:Static ToolBar.ComboBoxStyleKey}" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}"/>
+    <Style x:Key="{x:Static ToolBar.ButtonStyleKey}" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}"/>
+	<Style x:Key="{x:Static ToolBar.ToggleButtonStyleKey}" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource {x:Type ToggleButton}}"/>
+	<Style x:Key="{x:Static ToolBar.SeparatorStyleKey}" TargetType="{x:Type Separator}" BasedOn="{StaticResource {x:Type Separator}}"/>
+
+	<Style TargetType="{x:Type ToolBar}">
+		<Setter Property="Background" Value="{StaticResource ControlBackgroundBrush}" />
+		<Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+	</Style>
 </ResourceDictionary>
