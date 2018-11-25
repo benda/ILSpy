@@ -103,6 +103,7 @@ namespace ICSharpCode.ILSpy.Options
 			s.ShowMetadataTokens = (bool?) e.Attribute("ShowMetadataTokens") ?? false;
 		    s.EnableWordWrap = (bool?)e.Attribute("EnableWordWrap") ?? false;
 			s.SortResults = (bool?)e.Attribute("SortResults") ?? true;
+			s.SelectedTheme = (string) e.Attribute("Theme") == "Dark" ? Themes.Dark : Themes.Standard;
 
 			return s;
 		}
@@ -118,6 +119,7 @@ namespace ICSharpCode.ILSpy.Options
 			section.SetAttributeValue("ShowMetadataTokens", s.ShowMetadataTokens);
 			section.SetAttributeValue("EnableWordWrap", s.EnableWordWrap);
 			section.SetAttributeValue("SortResults", s.SortResults);
+			section.SetAttributeValue("Theme", s.SelectedTheme.Name);
 
 			XElement existingElement = root.Element("DisplaySettings");
 			if (existingElement != null)

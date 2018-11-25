@@ -156,6 +156,9 @@
     <Compile Include="Languages\IResourceFileHandler.cs" />
     <Compile Include="Languages\Language.cs" />
     <Compile Include="Languages\Languages.cs" />
+    <Compile Include="Options\Theme.cs" />
+    <Compile Include="Options\ThemeManager.cs" />
+    <Compile Include="Options\Themes.cs" />
     <Compile Include="Search\LiteralSearchStrategy.cs" />
     <Compile Include="LoadedAssembly.cs" />
     <Compile Include="LoadedAssemblyExtensions.cs" />
@@ -319,6 +322,7 @@
     <Page Include="Search\SearchPane.xaml" />
     <Page Include="TextView\DecompilerTextView.xaml" />
     <Page Include="themes\generic.xaml" />
+    <Page Include="themes\dark.xaml" />
   </ItemGroup>
 
   <ItemGroup>

@@ -63,6 +63,16 @@
 				<CheckBox IsChecked="{Binding ShowMetadataTokens}">Show metadata tokens</CheckBox>
 				<CheckBox IsChecked="{Binding EnableWordWrap}">Enable word wrap</CheckBox>
 				<CheckBox IsChecked="{Binding SortResults}">Sort results by fitness</CheckBox>
+				<StackPanel Orientation="Horizontal">
+					<Label Content="Theme:" Target="{Binding ElementName=themeComboBox}"/>
+					<ComboBox Name="themeComboBox" ItemsSource="{Binding PossibleThemes}" SelectedItem="{Binding SelectedTheme}" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="100">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</StackPanel>
 			</StackPanel>
 		</GroupBox>
 	</Grid>

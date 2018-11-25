@@ -16,6 +16,7 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
@@ -120,6 +121,23 @@ namespace ICSharpCode.ILSpy.Options
 			}
 		}
 
+		Theme selectedTheme = Themes.Standard;
+
+		public Theme SelectedTheme {
+			get { return selectedTheme; }
+			set {
+				if (selectedTheme != value) {
+					selectedTheme = value;
+					ThemeManager.SetTheme(value);
+					OnPropertyChanged();
+				}
+			}
+		}
+
+		public IEnumerable<Theme> PossibleThemes {
+			get { return Themes.GetAll(); }
+		}
+
 		public void CopyValues(DisplaySettings s)
 		{
 			this.SelectedFont = s.selectedFont;
@@ -128,6 +146,7 @@ namespace ICSharpCode.ILSpy.Options
 			this.ShowMetadataTokens = s.showMetadataTokens;
 			this.EnableWordWrap = s.enableWordWrap;
 			this.SortResults = s.sortResults;
+			this.SelectedTheme = s.selectedTheme;
 		}
 	}
 }
