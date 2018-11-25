@@ -5,7 +5,11 @@
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="../Controls/SearchBoxStyle.xaml" />
 	</ResourceDictionary.MergedDictionaries>
-	
+
+	<SolidColorBrush x:Key="NormalBorderBrush" Color="Black" />
+	<SolidColorBrush x:Key="ControlBackgroundBrush" Color="White" />
+
+
 	<!-- SortableGridViewColumn.
 		Displays an up arrow or down arrow in the column header when the grid is sorted using that column.
 	-->
